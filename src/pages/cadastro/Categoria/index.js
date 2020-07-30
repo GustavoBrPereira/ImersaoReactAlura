@@ -22,12 +22,20 @@ function CadastroCategoria() {
     })
   }
 
-  function handleChange(infosDoEvento) {
+  function handleChange(event){
+    const { getAttribute, value } = event.target;
+    setValue(
+      getAttribute('name'), 
+      value
+    );
+  }
+
+/*   function handleChange(infosDoEvento) {
     setValue(
       infosDoEvento.target.getAttribute('name'),
       infosDoEvento.target.value
     );
-  }
+  } */
 
   return (
     <PageDefault>
